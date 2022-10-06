@@ -21,9 +21,9 @@ p karla.can_use_services?
 p valentino.can_use_services?
 p valentino.age
 
-person = Person.new(age:22, name:'maximilianus')
-p  person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-p  capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-p  capitalizedTrimmedPerson.correct_name
+person = Person.new(age: 22, name: 'maximilianus')
+p person.correct_name
+capitalized_person = CapitalizeDecorator.new(person)
+p capitalized_person.correct_name
+capitalized_trimmed_person = TrimmerDecorator.new(capitalizedPerson)
+p capitalized_trimmed_person.correct_name

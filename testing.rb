@@ -1,6 +1,7 @@
 require_relative 'person'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'extra_decorators'
 
 amanda = Person.new(age: 12, name: 'Amanda', parent_permission: false)
 
@@ -19,3 +20,10 @@ p karla.specialization
 p karla.can_use_services?
 p valentino.can_use_services?
 p valentino.age
+
+person = Person.new(age: 22, name: 'maximilianus')
+p person.correct_name
+capitalized_person = CapitalizeDecorator.new(person)
+p capitalized_person.correct_name
+capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+p capitalized_trimmed_person.correct_name

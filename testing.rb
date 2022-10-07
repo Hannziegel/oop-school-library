@@ -2,6 +2,9 @@ require_relative 'person'
 require_relative 'student'
 require_relative 'teacher'
 require_relative 'extra_decorators'
+require_relative 'classroom'
+require_relative 'book'
+require_relative 'rental'
 
 amanda = Person.new(age: 12, name: 'Amanda', parent_permission: false)
 
@@ -27,3 +30,14 @@ capitalized_person = CapitalizeDecorator.new(person)
 p capitalized_person.correct_name
 capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
 p capitalized_trimmed_person.correct_name
+
+ruby = Classroom.new('ruby')
+p ruby
+p jose.classroom
+ruby.add_student(jose)
+p ruby
+p jose
+book = Book.new(title: 'The name of the Wind', author: 'Patrick Rothfuss')
+p book
+rental = Rental.new('31 of Oct, 1992', jose, book)
+p rental

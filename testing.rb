@@ -41,4 +41,3 @@ book = Book.new(title: 'The name of the Wind', author: 'Patrick Rothfuss')
 p book
 rental = Rental.new('31 of Oct, 1992', jose, book)
 p rental
-

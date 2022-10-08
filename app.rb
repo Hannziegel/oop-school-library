@@ -52,7 +52,7 @@ class App
 
   def list_all_books
     @books.each do |book|
-      print "Title: #{book.title}, Author: #{book.author}"
+      puts "Title: #{book.title}, Author: #{book.author}"
     end
   end
 
